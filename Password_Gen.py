@@ -1,7 +1,5 @@
 import random as rnd
 
-max_num, max_char, max_sym, max_schar = 3, 3, 3, 3
-
 def num_gen(length):
     l = []
     for x in range(0, length):
