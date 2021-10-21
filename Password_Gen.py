@@ -8,7 +8,7 @@ def num_gen(length):
     s = ''.join(map(chr,l))
     return s
 
-def char_gen(length):
+def upper_gen(length):
     l = []
     for x in range(0, length):
         l.append(rnd.randint(65, 90))
@@ -16,7 +16,7 @@ def char_gen(length):
     s = ''.join(map(chr,l))
     return s
 
-def schar_gen(length):
+def lower_gen(length):
     l = []
     for x in range(0, length):
         l.append(rnd.randint(97, 122))
@@ -48,11 +48,11 @@ print("""
 input("Press Enter to continue...")
 
 max_num = int(input("How many numbers do you want the password to have?\n"))
-max_char = int(input("How many uppercase characters?\n"))
-max_schar = int(input("How many lowercase characters?\n"))
+max_upper = int(input("How many uppercase letters?\n"))
+max_lower = int(input("How many lowercase letters?\n"))
 max_sym = int(input("How many extra symbols?\n"))
 
-var = num_gen(max_num) + char_gen(max_char) + schar_gen(max_schar) + sym_gen(max_sym)
+var = num_gen(max_num) + upper_gen(max_upper) + lower_gen(max_lower) + sym_gen(max_sym)
 var = rnd.sample(var, len(var))
 var = "".join(var)
 
